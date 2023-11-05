@@ -1,0 +1,77 @@
+
+
+h1,
+h4 {
+    text-align: center;
+    color: #fff;
+}
+
+.centrarJust {
+    display: flex;
+    justify-content: center;
+}
+
+.tituloPrincipal {
+    position: center;
+    justify-content: flex-start;
+    font-family: Gila;
+    font-size: 8rem;
+    color: #ffffff;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+.margenTopInicial {
+    margin-top: 4rem;
+}
+
+.creacion {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+    border-top: 2px solid white;
+    margin-top: 2rem;
+}
+
+h2, p {
+    color: #ffffff;
+}
+
+.margengrande {
+    margin-top: 8rem;
+    color: #ffffff;
+}
+
+.blando {
+    margin-top: 10rem;
+    color: #ffffff;
+}
+
+.bottom {
+    margin-bottom: 10rem;
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.paginacion button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.paginacion button:disabled {
+    background-color: #000000;
+    cursor: not-allowed;
+}
+
+.creacionProyecto{
+    font-size: 3rem;
+}
