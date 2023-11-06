@@ -1,11 +1,8 @@
 import React from "react"
-
-
-const Info = (props) => {
-
+const Info = () => {
   return (
     <div>
-      <h1 className='margengrande'>Owen Chen</h1>
+      <h1 >Owen Chen</h1>
       <h4>estudiante de secundaria ORT</h4>
     </div>
   )

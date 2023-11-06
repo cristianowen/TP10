@@ -8,7 +8,7 @@ import './Layout.css';
 import { FavoritosContext } from '../Context/FavoritosContext';
 
 const FooterSocialLink = ({ href, children }) => (
-  <div className="espacioFooter">
+  <div >
     <a className="responsiveSiteFooter__socialLink hjgjuf" href={href}>
       {children}
     </a>
@@ -22,17 +22,17 @@ const Layout = () => {
     <div className="layout-container">
       <Navbar expand="lg" className="navbar">
         <Container>
-          <Navbar.Brand className="text-white espacio">TP10</Navbar.Brand>
+          <Navbar.Brand className="text-white space">TP10</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="justify-content-end">
-              <Link to={'/'} className="text-white linkEstilo espacio">
+              <Link to={'/'} className="text-white linkEstilo space">
                 Home
               </Link>
-              <Link to={'/Info'} className="text-white linkEstilo espacio">
+              <Link to={'/Info'} className="text-white linkEstilo space">
                 Información
               </Link>
-              <Link to={'/MisCreaciones'} className="text-white linkEstilo espacio">
+              <Link to={'/MisCreaciones'} className="text-white linkEstilo space">
                 Mis creaciones
               </Link>
               <Badge badgeContent={favoritos.length} color="success">
