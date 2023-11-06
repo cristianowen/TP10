@@ -7,7 +7,7 @@ import Info from './components/Info';
 import MisCreaciones from './components/MisCreaciones';
 import Layout from './components/Layout';
 import FavoritosProvider from './Context/FavoritosContext';
-import CreacionesProvider from './Context/CreacionesContext';
+import CreacionesProvider from './Context/CreationsContext';
 
 
 function App() {

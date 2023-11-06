@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
-export const FavoritosContext = React.createContext();
+export const FavoritosContext = createContext();
 
-const FavoritosProvider = (props) => {
-    const [favoritos, setFavoritos] = React.useState(JSON.parse(localStorage.getItem('favoritos')) || []);
-    
-    React.useEffect(()=>{
-        localStorage.setItem('favoritos', JSON.stringify(favoritos))
-    }, [favoritos])
+const FavoritosProvider = ({ children }) => {
+  const [favoritos, setFavoritos] = useState(() => JSON.parse(localStorage.getItem('favoritos')) || []);
 
-    return <FavoritosContext.Provider value={{favoritos, setFavoritos}}>{props.children}</FavoritosContext.Provider>
-}
+  useEffect(() => {
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
+  }, [favoritos]);
+
+  return (
+    <FavoritosContext.Provider value={{ favoritos, setFavoritos }}>
+      {children}
+    </FavoritosContext.Provider>
+  );
+};
 
 export default FavoritosProvider;

@@ -1,7 +1,7 @@
 import './Home.css'
-import Favorito from './Favorito';
+import Favorito from './FavoritoBoton';
 import React, { useState, useContext } from 'react';
-import { CreacionesContext } from "../Context/CreacionesContext";
+import { CreacionesContext } from "../Context/CreationsContext";
 
 const MisCreaciones = (props) => {
   const { creaciones, setCreaciones } = useContext(CreacionesContext)

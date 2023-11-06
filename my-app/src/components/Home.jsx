@@ -1,31 +1,11 @@
 import './Home.css'
 import React from 'react'
-import { useState, useEffect, useContext } from 'react';
-import Titulo from './Titulo'
-import Favorito from './Favorito'
-import { CreacionesContext } from "../Context/CreacionesContext"
-
-const Home = (props) => {
-    const { creaciones, setCreaciones  } = useContext(CreacionesContext)
+import MisCreaciones from './MisCreaciones';
+const Home = () => {
 
   return (
     <div className='bottom'>
-        <section>
-        <div className='margenTopInicial'>
-    <h1>Mi Portfolio</h1>
-    </div>
-        </section>
-        {creaciones.slice(0, 6).map((creaciones) => 
-            <section className='creacion' key={creaciones.id}>
-                <p>Mi proyecto N° {creaciones.id}</p>
-                <h2 className='creacionProyecto'><b>{creaciones.nombre}</b></h2>
-                <p>{creaciones.descripcion}</p>
-                <p>Lenguaje/s usado/s: {creaciones.leguaje}</p>
-                <p>{creaciones.fecha}</p>
-                <a  style={{ textDecoration: 'none', color: 'white'}} href={creaciones.respositorio} target="_blank" rel="noopener noreferrer">{creaciones.respositorio}</a>
-                <Favorito id={creaciones.id}/>
-            </section>
-        )}
+        <MisCreaciones/>
     </div>
   )
 }
