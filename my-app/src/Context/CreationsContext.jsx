@@ -6,43 +6,43 @@ const CreacionesProvider = (props) => {
     const [creations, setCreations] = React.useState([{
         id: 1,
         nombre: 'Bicho Store',
-        descripcion: 'E-commerce para el club Argentinos Juniors',
-        leguaje: 'React, Css',
+        info: 'E-commerce para el club Argentinos Juniors',
+        lenguaje: 'React, Css',
         imagen: null
       },
       {
         id: 2,
         nombre: 'To do list',
-        descripcion: 'Lista de tareas.',
-        leguaje: 'React, Css',
+        info: 'Lista de tareas.',
+        lenguaje: 'React, Css',
         imagen: null
       },
       {
         id: 3,
         nombre: 'Urban Luxury',
-        descripcion: 'Página de concientización del cambio climatico y donaciones.',
-        leguaje: 'React, Css',
+        info: 'Página de concientización del cambio climatico y donaciones.',
+        lenguaje: 'React, Css',
         imagen: null
       },
       {
         id: 4,
         nombre: 'Flags Handling',
-        descripcion: 'Un juego en el cual tenes que adivinar la bandera',
-        leguaje: 'JS, CSS',
+        info: 'Un juego en el cual tenes que adivinar la bandera',
+        lenguaje: 'JS, CSS',
         imagen: null
       },
       {
         id: 5,
         nombre: 'Adopcion de perros',
-        descripcion: 'Página para adoptar perros.',
-        leguaje: 'JS, CSS',
+        info: 'Página para adoptar perros.',
+        lenguaje: 'JS, CSS',
         imagen: null
       },
       {
         id: 6,
         nombre: 'Akimbo',
-        descripcion: 'Mi marca de ropa donde uso TiendaNube para administrar ventas.',
-        leguaje: 'TiendaNube',
+        info: 'Mi marca de ropa donde uso TiendaNube para administrar ventas.',
+        lenguaje: 'TiendaNube',
         imagen: null
       }
     ])

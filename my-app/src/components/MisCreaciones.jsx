@@ -3,15 +3,15 @@ import Favorito from './FavoritoBoton';
 import React, { useState, useContext } from 'react';
 import { CreacionesContext } from "../Context/CreationsContext";
 
-const MisCreaciones = (props) => {
+const MisCreaciones = () => {
   const { creaciones, setCreaciones } = useContext(CreacionesContext)
-  const elementosPorPagina = 5
+  const proyectoPorPagina = 4
   const [paginaActual, setPaginaActual] = useState(1)
 
   const obtenerPosiciones = () => {
-    const ultimoElemento = paginaActual * elementosPorPagina
-    const primerElemento = ultimoElemento - elementosPorPagina
-    return creaciones.slice(primerElemento, ultimoElemento)
+    const proyectoUltimo = paginaActual * proyectoPorPagina
+    const proyectoUno = proyectoUltimo - proyectoPorPagina
+    return creaciones.slice(proyectoUno, proyectoUltimo)
   }
 
   const cambiarPagina = (siguientePag) => {
@@ -25,16 +25,16 @@ const MisCreaciones = (props) => {
         <section className='creacion' key={creacion.id}>
           <p>Mi proyecto N° {creacion.id}</p>
           <h2>{creacion.nombre}</h2>
-          <p>{creacion.descripcion}</p>
-          <p>Lenguaje de programación: {creacion.leguaje}</p>
+          <p>{creacion.info}</p>
+          <p>Lenguaje de programación: {creacion.lenguaje}</p>
           <Favorito id={creacion.id}/>
         </section>
       ))}
 
-      <div className="paginacion">
+      <div >
         <button type="button" class="btn btn-light" onClick={() => cambiarPagina(paginaActual - 1)} disabled={paginaActual === 1}>Anterior</button>
         <span>pag. {paginaActual}</span>
-        <button type="button" class="btn btn-light" onClick={() => cambiarPagina(paginaActual + 1)} disabled={paginaActual * elementosPorPagina >= creaciones.length}>Siguiente</button>
+        <button type="button" class="btn btn-light" onClick={() => cambiarPagina(paginaActual + 1)} disabled={paginaActual * proyectoPorPagina >= creaciones.length}>Siguiente</button>
       </div>
     </div>
   )
